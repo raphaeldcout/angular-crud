@@ -1,0 +1,16 @@
+.card {
+    padding: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.content-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}

@@ -1,0 +1,42 @@
+<mat-card class="card">
+  <mat-card-title>Deletar produto</mat-card-title>
+
+  <form>
+    <mat-form-field *ngIf="product">
+      <input
+        matInput
+        placeholder="Nome"
+        [value]="product.name"
+        name="name"
+        disabled
+      />
+    </mat-form-field>
+
+    <mat-form-field *ngIf="product">
+      <input
+        matInput
+        placeholder="Preço (R$)"
+        [value]="product.price"
+        name="price"
+        disabled
+      />
+    </mat-form-field>
+  </form>
+
+  <mat-card>
+    <mat-card-content>
+      Deseja realmente deletar esse produto?
+      <strong>(Essa operação não pode ser desfeita)</strong>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="content-btns" *ngIf="product">
+    <button mat-raised-button (click)="cancel()" color="secondary">
+      Cancelar
+    </button>
+
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
+      Deletar
+    </button>
+  </div>
+</mat-card>
